@@ -1,12 +1,12 @@
 {
   "name": "@bluecateng/nano-spring",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny implementation of spring animation",
   "license": "ISC",
-  "main": "index.es6",
+  "main": "index.mjs",
   "scripts": {
     "build:es5": "BABEL_ENV=es5 babel -o index.es5 src",
-    "build:es6": "BABEL_ENV=es6 babel -o index.es6 src",
+    "build:es6": "BABEL_ENV=es6 babel -o index.mjs src",
     "build": "npm run build:es5 && npm run build:es6",
     "test": "jest",
     "test-ci": "npm ci && jest --ci --silent --reporters=jest-junit",
@@ -18,7 +18,7 @@
   ],
   "files": [
     "index.es5",
-    "index.es6"
+    "index.mjs"
   ],
   "devDependencies": {
     "@babel/cli": "^7.8.4",

@@ -4,4 +4,4 @@ coverage/
 node_modules/
 
 index.es5
-index.es6
+index.mjs
