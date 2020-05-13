@@ -1,24 +1,3 @@
-/**
- * @callback SpringStep
- * @param {number} p - step position, a number between 0 and 1.
- * @return {void}
- */
-/**
- * @callback SpringDone
- * @return {void}
- */
-/**
- * @callback SpringReturn
- * @return {void}
- */
-/**
- * Animation using spring simulation.
- * @param {number} stiffness - spring stiffness, in kg / s^2.
- * @param {number} damping - spring damping, in kg / s.
- * @param {SpringStep} step - function called on each step.
- * @param {SpringDone} [done] - function called at the end of the animation.
- * @return {SpringReturn} function to cancel the animation.
- */
 export default (stiffness, damping, step, done) => {
 	let f;
 	const nextStep = () => {

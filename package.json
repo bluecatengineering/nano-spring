@@ -1,9 +1,10 @@
 {
   "name": "@bluecateng/nano-spring",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Tiny implementation of spring animation",
   "license": "ISC",
   "main": "index.mjs",
+  "types": "index.d.ts",
   "scripts": {
     "build:es5": "BABEL_ENV=es5 babel -o index.es5 src",
     "build:es6": "BABEL_ENV=es6 babel -o index.mjs src",
@@ -23,7 +24,8 @@
   ],
   "files": [
     "index.es5",
-    "index.mjs"
+    "index.mjs",
+    "index.d.ts"
   ],
   "devDependencies": {
     "@babel/cli": "^7.8.4",
