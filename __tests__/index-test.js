@@ -1,16 +1,20 @@
 import spring from '../src';
 
+const now = jest.fn();
+global.requestAnimationFrame = jest.fn();
+global.cancelAnimationFrame = jest.fn();
+global.performance = {now};
+
 describe('spring', () => {
 	let count = 0;
 	let current = 0;
 	const step = 54; // produces shortest animation for test parameters
-	jest.spyOn(performance, 'now').mockImplementation(() => current);
-	jest.spyOn(window, 'requestAnimationFrame').mockImplementation(f => (
+	now.mockImplementation(() => current);
+	requestAnimationFrame.mockImplementation(f => (
 		current += step,
 		f(),
 		++count
 	));
-	jest.spyOn(window, 'cancelAnimationFrame');
 
 	beforeEach(() => {
 		count = 0;
@@ -30,7 +34,7 @@ describe('spring', () => {
 
 	it('does not fail if done is not specified', () => {
 		const step = jest.fn();
-		const cancel = spring(250, 25, step);
+		spring(250, 25, step);
 		expect(step.mock.calls).toEqual([[0.729], [0.671409], [0.931108689], [0.890435563569], [0.984543631628049], [0.9628735003505341], [0.9975232645421249], [0.9872013872238591], [1]]);
 	});
 });
