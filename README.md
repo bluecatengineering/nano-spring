@@ -1,4 +1,4 @@
-# @bluecateng/nano-spring [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/bluecatengineering/nano-spring/blob/use-circleci/LICENSE) [![npm version](https://img.shields.io/npm/v/@bluecateng/nano-spring.svg?style=flat)](https://www.npmjs.com/package/@bluecateng/nano-spring) [![CircleCI](https://circleci.com/gh/bluecatengineering/nano-spring.svg?style=shield)](https://circleci.com/gh/bluecatengineering/nano-spring)
+# @bluecateng/nano-spring [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/bluecatengineering/nano-spring/blob/master/LICENSE.md) [![npm version](https://img.shields.io/npm/v/@bluecateng/nano-spring.svg?style=flat)](https://www.npmjs.com/package/@bluecateng/nano-spring) [![CircleCI](https://circleci.com/gh/bluecatengineering/nano-spring.svg?style=shield)](https://circleci.com/gh/bluecatengineering/nano-spring)
 
 Tiny implementation of spring animation with mass set to 1.
 
