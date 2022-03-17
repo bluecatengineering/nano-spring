@@ -30,9 +30,11 @@
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/preset-env": "^7.15.8",
+    "@bluecateng/prettier-config": "^1.0.0",
     "babel-preset-minify": "^0.5.1",
     "jest": "^27.3.1",
-    "jest-junit": "^13.0.0"
+    "jest-junit": "^13.0.0",
+    "prettier": "^2.6.0"
   },
   "jest": {
     "collectCoverage": true,
@@ -50,5 +52,6 @@
     "classNameTemplate": "{classname}",
     "titleTemplate": "{title}",
     "ancestorSeparator": " / "
-  }
+  },
+  "prettier": "@bluecateng/prettier-config"
 }
