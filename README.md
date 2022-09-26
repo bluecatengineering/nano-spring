@@ -2,7 +2,7 @@
 
 Tiny implementation of spring animation with mass set to 1.
 
-Size: 301 bytes before compression.
+Size: 290 bytes before compression.
 
 # Installation
 

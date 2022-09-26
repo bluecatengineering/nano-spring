@@ -1,14 +1,12 @@
 {
   "name": "@bluecateng/nano-spring",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Tiny implementation of spring animation",
   "license": "ISC",
-  "main": "index.mjs",
+  "exports": "./dist/index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build:es5": "BABEL_ENV=es5 babel -o index.es5 src",
-    "build:es6": "BABEL_ENV=es6 babel -o index.mjs src",
-    "build": "npm run build:es5 && npm run build:es6",
+    "build": "esbuild src/index.js --bundle --minify --format=esm --outfile=dist/index.js",
     "test": "jest",
     "test-ci": "npm ci && jest --ci --silent --reporters=jest-junit",
     "prepack": "npm t && npm run build"
@@ -23,15 +21,13 @@
     "vanilla"
   ],
   "files": [
-    "index.es5",
-    "index.mjs",
+    "dist",
     "index.d.ts"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
     "@babel/preset-env": "^7.15.8",
     "@bluecateng/prettier-config": "^1.0.0",
-    "babel-preset-minify": "^0.5.1",
+    "esbuild": "^0.15.9",
     "jest": "^27.3.1",
     "jest-junit": "^13.0.0",
     "prettier": "^2.6.0"
